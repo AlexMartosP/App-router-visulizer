@@ -65,10 +65,11 @@ export default function RootLayout({
               <NavItem href="">Stripe integration</NavItem>
             </NavGroup>
           </div>
-          <div className="flex-1 overflow-y-auto p-32">
+          <div className="flex-1 h-screen overflow-y-auto p-32">
             <div className="border p-4 rounded-md">
               <URLBar />
             </div>
+            <div className="py-2"></div>
             <div className="border p-4 rounded-md">{children}</div>
           </div>
         </div>
