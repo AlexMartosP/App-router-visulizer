@@ -29,8 +29,8 @@ export default function RootLayout({
             <div className="py-4"></div>
             <NavGroup title="Routing">
               <NavItem href="/dynamic-routes">Dynamic routes</NavItem>
-              <NavItem href="">Catch all routes</NavItem>
-              <NavItem href="">Parallel routes</NavItem>
+              <NavItem href="/catch-all">Catch all routes</NavItem>
+              <NavItem href="/parallel">Parallel routes</NavItem>
               <NavItem href="">Intercepting routes</NavItem>
             </NavGroup>
             <div className="py-4"></div>
