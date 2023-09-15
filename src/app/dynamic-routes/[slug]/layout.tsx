@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-export default ({ children }: { children: ReactNode }) => {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <span className="font-semibold">Change id</span>
@@ -22,4 +22,4 @@ export default ({ children }: { children: ReactNode }) => {
       <div>{children}</div>
     </>
   );
-};
+}
