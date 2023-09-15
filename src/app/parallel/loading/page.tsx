@@ -1,8 +1,9 @@
 export default function Page() {
+  console.log("In regular page");
   return (
     <>
       <h1>Regular page</h1>
-      <p>This is the origin page for this route</p>
+      <p>Each route slot loads independently</p>
     </>
   );
 }

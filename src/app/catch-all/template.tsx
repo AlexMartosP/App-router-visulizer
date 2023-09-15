@@ -1,12 +1,13 @@
 "use client";
 
 import { Button } from "@/components/Button";
+import DashedBorder from "@/components/DashedBorder";
 import FormatedObject from "@/components/FormatedObject";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-export default ({ children }: { children: any }) => {
+export default function Template({ children }: { children: any }) {
   const params = useParams();
   return (
     <>
@@ -47,11 +48,9 @@ export default ({ children }: { children: any }) => {
       {Object.keys(params).length > 0 && (
         <>
           <div className="py-4"></div>
-          <div className="p-4 border-dashed border rounded-md border-gray-400">
-            {children}
-          </div>
+          <DashedBorder>{children}</DashedBorder>
         </>
       )}
     </>
   );
-};
+}
