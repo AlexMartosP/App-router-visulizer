@@ -1,11 +1,12 @@
 import { wait } from "@/lib/utils";
+import { notFound } from "next/navigation";
 
 export default async function Page() {
-  await wait(1000);
+  notFound();
 
   return (
     <>
-      <p>Loading is done</p>
+      <h2>This should not render</h2>
     </>
   );
 }

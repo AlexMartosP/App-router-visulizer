@@ -12,9 +12,6 @@ export default function Layout({
   slot1: ReactNode;
   slot2: ReactNode;
 }) {
-  console.log(children);
-  console.log(slot1);
-  console.log(slot2);
   return (
     <div>
       <h1>Parallel routes</h1>

@@ -10,7 +10,7 @@ export default function Page() {
       </p>
       <div className="pt-6"></div>
       <Button asChild>
-        <Link href="/intercepting/image">View image</Link>
+        <Link href="/intercepting/image">View image (very cool)</Link>
       </Button>
     </div>
   );

@@ -35,21 +35,23 @@ export default function RootLayout({
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Layouts">
-              <NavItem href="">Nested layouts</NavItem>
-              <NavItem href="">Route groups (grouped layouts)</NavItem>
+              <NavItem href="/nested-layouts">Nested layouts</NavItem>
+              <NavItem href="/route-groups">
+                Route groups (grouped layouts)
+              </NavItem>
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Files & states">
-              <NavItem href="">Loading</NavItem>
-              <NavItem href="">Error</NavItem>
-              <NavItem href="">Not found</NavItem>
+              <NavItem href="/loading">Loading</NavItem>
+              <NavItem href="/error">Error</NavItem>
+              <NavItem href="/not-found">Not found</NavItem>
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Rendering & Data fetching">
               <NavItem href="">Streaming</NavItem>
-              <NavItem href="">Static data (SSG)</NavItem>
-              <NavItem href="">Dynamic data (SSR)</NavItem>
-              <NavItem href="">Incremental Static Regeneration</NavItem>
+              <NavItem href="/ssg">Static data (SSG)</NavItem>
+              <NavItem href="/ssr">Dynamic data (SSR)</NavItem>
+              <NavItem href="/isr">Incremental Static Regeneration</NavItem>
               <NavItem href="">Server components</NavItem>
             </NavGroup>
             <div className="py-4"></div>
