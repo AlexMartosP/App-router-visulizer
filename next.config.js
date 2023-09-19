@@ -8,6 +8,8 @@ const nextConfig = {
         pathname: "/photo**",
       },
     ],
+    loader: "custom",
+    loaderFile: "./src/lib/loader.ts",
   },
 };
 

@@ -48,11 +48,10 @@ export default function RootLayout({
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Rendering & Data fetching">
-              <NavItem href="">Streaming</NavItem>
+              <NavItem href="/streaming">Streaming</NavItem>
               <NavItem href="/ssg">Static data (SSG)</NavItem>
               <NavItem href="/ssr">Dynamic data (SSR)</NavItem>
               <NavItem href="/isr">Incremental Static Regeneration</NavItem>
-              <NavItem href="">Server components</NavItem>
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Mutation">
