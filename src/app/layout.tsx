@@ -61,7 +61,7 @@ export default function RootLayout({
             <div className="py-4"></div>
             <NavGroup title="Other">
               <NavItem href="/client-context">Client context</NavItem>
-              {/* <NavItem href="">Pagination w. infinite</NavItem> */}
+              <NavItem href="/pagination">Pagination w. infinite</NavItem>
             </NavGroup>
           </div>
           <div className="flex-1 h-screen overflow-y-auto p-32">
