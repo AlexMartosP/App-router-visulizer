@@ -4,6 +4,8 @@ import { Button } from "@/components/Button";
 import { Input } from "@/components/ui/Input";
 import { Separator } from "@/components/ui/Separator";
 import * as z from "zod";
+import { Message } from "@prisma/client";
+import { Dot } from "lucide-react";
 
 const textSchema = z.string();
 
@@ -12,12 +14,10 @@ export default function Data({
   messages,
 }: {
   action: (text: string) => Promise<void>;
-  messages: string[];
+  messages: Message[];
 }) {
-  const [optimisticMessages, addOptimisticMessages] = useOptimistic<string[]>(
-    messages
-    // (state: string[], newMessage: string) => [...state, newMessage]
-  );
+  const [optimisticMessages, addOptimisticMessages] =
+    useOptimistic<Message[]>(messages);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -26,22 +26,35 @@ export default function Data({
     const text = textSchema.safeParse(formData.get("text"));
 
     if (text.success) {
-      addOptimisticMessages((state) => [...state, text.data]);
-      // addOptimisticMessages(text.data);
+      addOptimisticMessages((state) => [
+        ...state,
+        {
+          id: Date.now(),
+          text: text.data,
+          dateSent: new Date(),
+        },
+      ]);
 
       action(text.data);
     }
   }
 
-  console.log(optimisticMessages);
-
   return (
     <>
       <h2 className="font-semibold">Messages list</h2>
+      <div className="py-2"></div>
       {optimisticMessages.length > 0 ? (
-        <ul>
+        <ul role="list" className="flex flex-col items-start gap-2">
           {optimisticMessages.map((message, i) => (
-            <li key={i}>{message}</li>
+            <li
+              className="relative pt-2 pb-6 px-4 w-96 bg-blue-200 rounded-md rounded-bl-none"
+              key={i}
+            >
+              {message.text}
+              <span className="absolute bottom-1 left-4 text-xs">
+                {formatDate(message.dateSent)}
+              </span>
+            </li>
           ))}
         </ul>
       ) : (
@@ -55,4 +68,11 @@ export default function Data({
       </form>
     </>
   );
+}
+
+function formatDate(date: Date) {
+  return Intl.DateTimeFormat("se-sv", {
+    dateStyle: "short",
+    timeStyle: "short",
+  }).format(date);
 }
