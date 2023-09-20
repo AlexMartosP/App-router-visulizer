@@ -77,6 +77,8 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    max-height: 100vh;
+    overflow: hidden; 
   }
   h1 {
     @apply font-semibold text-xl;

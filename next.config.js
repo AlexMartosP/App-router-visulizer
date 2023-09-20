@@ -11,6 +11,9 @@ const nextConfig = {
     loader: "custom",
     loaderFile: "./src/lib/loader.ts",
   },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 module.exports = nextConfig;

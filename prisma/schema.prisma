@@ -26,3 +26,9 @@ model Comment {
   product   Product @relation(fields: [productId], references: [SKU])
   productId String
 }
+
+model Message {
+  id       Int      @id @default(autoincrement())
+  text     String   @db.NVarChar(100)
+  dateSent DateTime @default(now())
+}

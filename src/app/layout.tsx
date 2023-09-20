@@ -55,14 +55,13 @@ export default function RootLayout({
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Mutation">
-              <NavItem href="">Route handler</NavItem>
-              <NavItem href="">Server action</NavItem>
+              <NavItem href="/route-handler">Route handler</NavItem>
+              <NavItem href="/server-actions">Server action</NavItem>
             </NavGroup>
             <div className="py-4"></div>
             <NavGroup title="Other">
-              <NavItem href="">Client context</NavItem>
-              <NavItem href="">Pagination</NavItem>
-              <NavItem href="">Stripe integration</NavItem>
+              <NavItem href="/client-context">Client context</NavItem>
+              {/* <NavItem href="">Pagination w. infinite</NavItem> */}
             </NavGroup>
           </div>
           <div className="flex-1 h-screen overflow-y-auto p-32">
