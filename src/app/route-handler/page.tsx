@@ -11,6 +11,8 @@ import prisma from "@/lib/prisma";
 import CommenstForm from "./components/CommentsForm";
 import { Separator } from "@/components/ui/Separator";
 import InlineCode from "@/components/InlineCode";
+import { Form, FormField } from "@/components/Form";
+import { useForm } from "react-hook-form";
 
 export default async function Page() {
   const productWComments = await prisma.product.findMany({
@@ -60,6 +62,7 @@ export default async function Page() {
           ))}
         </TableBody>
       </Table>
+
       <Separator className="my-8" />
       <CommenstForm products={productWComments} />
     </>

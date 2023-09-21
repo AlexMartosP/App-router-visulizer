@@ -11,9 +11,9 @@ export default function Layout({ children }: PropsWithChildren) {
         with the help of Server Actions.
       </p>
       <div className="py-4"></div>
-      <div>
+      <div className="flex gap-2">
         <NavLink href="/pagination">Regular</NavLink>
-        <NavLink href="/pagination/infinite">Infinite scroll</NavLink>
+        <NavLink href="/pagination/infinite-scroll">Infinite scroll</NavLink>
       </div>
       <div className="py-4"></div>
       <DashedBorder>{children}</DashedBorder>

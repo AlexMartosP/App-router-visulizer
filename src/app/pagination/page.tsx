@@ -1,11 +1,9 @@
 import { Button } from "@/components/Button";
-import { Card } from "@/components/Card";
-import NavLink from "@/components/NavLink";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
 import Link from "next/link";
 
-const OFFSET = 3;
+const LIMIT = 3;
 
 export default async function Page({
   searchParams,
@@ -16,13 +14,13 @@ export default async function Page({
 
   const currentPage = !pageParam
     ? 0
-    : pageParam === OFFSET
-    ? pageParam
-    : pageParam + (pageParam - OFFSET);
+    : pageParam === 2
+    ? LIMIT
+    : LIMIT * (pageParam - 1);
 
   const [products, count] = await prisma.$transaction([
     prisma.product.findMany({
-      take: OFFSET,
+      take: LIMIT,
       skip: currentPage,
     }),
     prisma.product.count(),
@@ -54,7 +52,7 @@ export default async function Page({
           </div>
           <div className="py-4"></div>
           <div className="flex gap-2 justify-center">
-            {new Array(Math.ceil(count / OFFSET)).fill(null).map((t, i) => (
+            {new Array(Math.ceil(count / LIMIT)).fill(null).map((t, i) => (
               <Button variant="secondary" size="icon" asChild>
                 <Link
                   href={{
