@@ -62,6 +62,8 @@ export default function RootLayout({
             <NavGroup title="Other">
               <NavItem href="/client-context">Client context</NavItem>
               <NavItem href="/pagination">Pagination w. infinite</NavItem>
+              <NavItem href="/middleware">Middlewares</NavItem>
+              <NavItem href="/middleware">OG images</NavItem>
             </NavGroup>
           </div>
           <div className="flex-1 h-screen overflow-y-auto p-32">
