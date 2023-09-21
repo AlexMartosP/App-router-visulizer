@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 export default function Layout({ children }: PropsWithChildren) {
   return (
     <DashedBorder label="Server component boundary (Layout)" color="blue">
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/client-context/computers/laptops">Laptops</NavLink>
         <NavLink href="/client-context/phones/iphones">IPhones</NavLink>
         <NavLink href="/client-context/smart-home/cameras">Cameras</NavLink>

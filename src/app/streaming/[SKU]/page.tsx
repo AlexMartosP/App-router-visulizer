@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import { Skeleton } from "@/components/Skeleton";
 import prisma from "@/lib/prisma";
 import { wait } from "@/lib/utils";
-import { Dot } from "lucide-react";
+import { Dot, Minus } from "lucide-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: { SKU: string } }) {
 
   return (
     <>
-      <div className="flex gap-8 items-center">
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center">
         <div className="flex-1">
           <Image
             src={product.imageId}
@@ -33,7 +33,8 @@ export default async function Page({ params }: { params: { SKU: string } }) {
             height={500}
             quality={80}
             alt={product.name}
-            className="rounded-md aspect-square object-cover"
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="rounded-md aspect-square object-cover w-full"
           />
         </div>
         <div className="flex-1">
@@ -44,8 +45,10 @@ export default async function Page({ params }: { params: { SKU: string } }) {
               <Delivery />
             </Suspense>
             <div className="py-2"></div>
-            <Button size="lg" className="w-full">
-              Add to cart <Dot /> {product.price} SEK
+            <Button size="lg" className="w-full flex flex-col lg:gap-2">
+              <span>Add to cart</span>
+              <Dot className="hidden lg:block" />
+              <span>{product.price} SEK</span>
             </Button>
           </div>
         </div>

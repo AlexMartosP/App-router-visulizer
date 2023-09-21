@@ -8,10 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/Table";
-import prisma from "@/lib/prisma";
 import { Separator } from "@/components/ui/Separator";
+import prisma from "@/lib/prisma";
 import CommenstForm from "./components/CommentsForm";
-import { createComment } from "./actions";
+
+export const dynamic = "force-dynamic";
 
 export default async function Page() {
   const productWComments = await prisma.product.findMany({

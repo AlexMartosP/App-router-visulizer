@@ -67,7 +67,7 @@ export default function CreateForm({ products }: CommenstFormProps) {
             control={form.control}
             name="productSKU"
             render={({ field }) => (
-              <FormItem className="w-96">
+              <FormItem className="lg:w-96 w-full">
                 <FormLabel>Product</FormLabel>
                 <FormControl>
                   <Select

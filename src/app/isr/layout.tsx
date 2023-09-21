@@ -11,7 +11,7 @@ export default function Layout({ children }: PropsWithChildren) {
       </p>
       <p>Each page revalidates every minute.</p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/isr">Main</NavLink>
         <NavLink href="/isr/1">Page 1</NavLink>
         <NavLink href="/isr/2">Page 2</NavLink>

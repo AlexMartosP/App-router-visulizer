@@ -13,9 +13,13 @@ export default async function AllProducts() {
   });
 
   return (
-    <div className="flex gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
       {products.map((product) => (
-        <Link href={`/streaming/${product.SKU}`} className="flex-1">
+        <Link
+          href={`/streaming/${product.SKU}`}
+          className="flex-1"
+          key={product.SKU}
+        >
           <div>
             <Image
               src={product.imageId}

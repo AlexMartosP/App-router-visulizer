@@ -10,9 +10,9 @@ export default function Layout({ children }: PropsWithChildren) {
       <p className="mt-4">
         With NEXT.js App Router streaming is available with RSC and Suspense
       </p>
-      <p>Try navigating to "Product" and watch content stream in</p>
+      <p>Try navigating to &quot;Product&quot; and watch content stream in</p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/streaming">Home</NavLink>
         <NavLink href="/streaming/SKU001">Product</NavLink>
       </div>

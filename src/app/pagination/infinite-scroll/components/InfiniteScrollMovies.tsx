@@ -39,7 +39,7 @@ export default function InfniniteScrollMovies({
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
         {productsData.products.map((product) => (
           <div key={product.SKU}>
             <div>

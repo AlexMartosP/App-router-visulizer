@@ -6,7 +6,7 @@ export const revalidate = 60;
 export default function Page({ params }: { params: { slug: string } }) {
   const buildTime = Date.now();
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-8">
       <div className="flex-1">
         <h1>Page {params.slug}</h1>
         <p>
@@ -15,7 +15,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           sit. Sapiente harum error quam unde, ipsum enim at corrupti!
         </p>
       </div>
-      <div className="w-[250px] rounded border shadow-sm p-4">
+      <div className="lg:w-[250px] w-full rounded border shadow-sm p-4">
         <p className="font-semibold">Time since last build</p>
         <div className="py-2"></div>
         <Time buildTime={buildTime} />

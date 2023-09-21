@@ -47,7 +47,7 @@ export default function Data({
         <ul role="list" className="flex flex-col items-start gap-2">
           {optimisticMessages.map((message, i) => (
             <li
-              className="relative pt-2 pb-6 px-4 w-96 bg-blue-200 rounded-md rounded-bl-none"
+              className="relative pt-2 pb-6 px-4 w-full lg:w-96 bg-blue-200 rounded-md rounded-bl-none"
               key={i}
             >
               {message.text}

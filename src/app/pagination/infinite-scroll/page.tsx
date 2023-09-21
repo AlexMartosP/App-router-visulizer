@@ -1,4 +1,3 @@
-import { wait } from "@/lib/utils";
 import { getProducts } from "./actions";
 import InfniniteScrollMovies from "./components/InfiniteScrollMovies";
 

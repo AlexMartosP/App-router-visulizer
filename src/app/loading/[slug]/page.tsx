@@ -25,10 +25,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
 function Fallback() {
   return (
     <div className="flex items-center space-x-4">
-      <Skeleton className="h-12 w-12 rounded-full" />
-      <div className="space-y-2">
-        <Skeleton className="h-4 w-[250px]" />
-        <Skeleton className="h-4 w-[200px]" />
+      <Skeleton className="h-12 lg:w-12 w-4 rounded-full" />
+      <div className="space-y-2 flex-1">
+        <Skeleton className="h-4 lg:w-[250px] w-full" />
+        <Skeleton className="h-4 lg:w-[200px] w-full" />
       </div>
     </div>
   );

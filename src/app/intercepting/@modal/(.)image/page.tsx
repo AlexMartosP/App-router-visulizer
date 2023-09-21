@@ -24,11 +24,10 @@ export default function Page() {
           </DialogDescription>
         </DialogHeader>
         <Image
-          src={coolDog}
+          src="1516222338250-863216ce01ea"
           width={400}
           height={300}
           alt="cool dog"
-          placeholder="blur"
           className="rounded-md w-full"
         />
       </DialogContent>

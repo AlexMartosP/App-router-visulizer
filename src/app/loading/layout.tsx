@@ -17,7 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
       </p>
       <p>The pages below use an artificial delay to simulate loading.</p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/loading">Main</NavLink>
         <NavLink href="/loading/computers">Computers</NavLink>
         <NavLink href="/loading/phones">Phones</NavLink>

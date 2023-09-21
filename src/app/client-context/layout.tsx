@@ -9,7 +9,7 @@ export default function Layout({ children }: PropsWithChildren) {
     <DashedBorder label="Server component boundary" color="blue">
       <ContextProvider>
         <DashedBorder label="Server component boundary" color="blue">
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <NavLink href="/client-context">Home</NavLink>
             <NavLink href="/client-context/computers">Computers</NavLink>
             <NavLink href="/client-context/phones">Phones</NavLink>

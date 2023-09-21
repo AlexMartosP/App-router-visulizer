@@ -12,7 +12,7 @@ export default function Layout({ children }: PropsWithChildren) {
         routes
       </p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <Button variant="secondary" asChild>
           <Link href="/nested-layouts/computers">Computers</Link>
         </Button>

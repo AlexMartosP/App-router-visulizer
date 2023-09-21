@@ -32,9 +32,9 @@ export default async function Page({
       <div className="py-4"></div>
       {products.length > 0 ? (
         <>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
             {products.map((product) => (
-              <div>
+              <div key={product.SKU}>
                 <div>
                   <Image
                     src={product.imageId}
@@ -51,9 +51,9 @@ export default async function Page({
             ))}
           </div>
           <div className="py-4"></div>
-          <div className="flex gap-2 justify-center">
+          <div className="flex gap-2 flex-wrap justify-center">
             {new Array(Math.ceil(count / LIMIT)).fill(null).map((t, i) => (
-              <Button variant="secondary" size="icon" asChild>
+              <Button variant="secondary" size="icon" asChild key={i}>
                 <Link
                   href={{
                     pathname: "/pagination",

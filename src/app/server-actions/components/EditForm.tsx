@@ -91,7 +91,7 @@ export default function EditForm({ products }: CommenstFormProps) {
       <div className="py-4"></div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleUpdate)}>
-          <div className="flex gap-4">
+          <div className="flex flex-col lg:flex-row gap-4">
             <FormField
               control={form.control}
               name="productSKU"
@@ -192,7 +192,7 @@ export default function EditForm({ products }: CommenstFormProps) {
             </>
           )}
           <div className="py-4"></div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button type="submit" size="lg" variant="default">
               Update
             </Button>

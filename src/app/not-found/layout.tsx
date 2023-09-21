@@ -18,7 +18,7 @@ export default function Layout({ children }: PropsWithChildren) {
         &nbsp; or there is no matching route page.
       </p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/not-found/triggered">Triggered with notFound()</NavLink>
         <NavLink href="/not-found/unknown">Unknown route</NavLink>
       </div>

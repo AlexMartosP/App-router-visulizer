@@ -1,3 +1,4 @@
+import InlineCode from "@/components/InlineCode";
 import {
   Table,
   TableBody,
@@ -7,12 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/Table";
+import { Separator } from "@/components/ui/Separator";
 import prisma from "@/lib/prisma";
 import CommenstForm from "./components/CommentsForm";
-import { Separator } from "@/components/ui/Separator";
-import InlineCode from "@/components/InlineCode";
-import { Form, FormField } from "@/components/Form";
-import { useForm } from "react-hook-form";
+
+export const dynamic = "force-dynamic";
 
 export default async function Page() {
   const productWComments = await prisma.product.findMany({
@@ -35,10 +35,12 @@ export default async function Page() {
         Try CRUD comments below and watch the table update.
       </p>
       <p className="mt-1">
-        With route handlers the component manually has to&nbsp;
-        <InlineCode>refresh()</InlineCode> the page, with Server Actions you can
-        call <InlineCode>revalidatePath()</InlineCode> or&nbsp;
-        <InlineCode>revalidateTag()</InlineCode>
+        With route handlers the page manually has to&nbsp;
+        <InlineCode>refresh()</InlineCode> the page to view the updates, with
+        Server Actions you can call <InlineCode>revalidatePath()</InlineCode>{" "}
+        or&nbsp;
+        <InlineCode>revalidateTag()</InlineCode>, they can also be used in route
+        handlers but wont take affect until reload or Route cache is stale.
       </p>
       <div className="py-4"></div>
       <Table>

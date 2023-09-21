@@ -17,7 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
       </p>
       <p>The page below will throw an error during rendering.</p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/error/trigger">Trigger error</NavLink>
       </div>
       <div className="py-4"></div>

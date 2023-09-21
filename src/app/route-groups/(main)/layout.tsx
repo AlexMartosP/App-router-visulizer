@@ -17,7 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
         divide you routes in different parts of he application use Route groups.
       </p>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/route-groups">Main</NavLink>
         <NavLink href="/route-groups/all-products">All products (shop)</NavLink>
         <NavLink href="/route-groups/123">Single product (shop)</NavLink>

@@ -17,7 +17,7 @@ export default function Layout({
       <h1>Parallel routes</h1>
       <p>Select a state to simulate</p>
       <div className="py-2"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <Button variant="secondary">
           <Link href="/parallel/default">Default</Link>
         </Button>
@@ -32,7 +32,7 @@ export default function Layout({
         </Button>
       </div>
       <div className="py-4"></div>
-      <div className="flex">
+      <div className="flex flex-col gap-4 lg:flex-row">
         <div className="flex-1">{children}</div>
         <div className="flex-1">
           <DashedBorder>{slot1}</DashedBorder>

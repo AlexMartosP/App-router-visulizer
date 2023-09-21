@@ -4,7 +4,7 @@ import { AlertCircle } from "lucide-react";
 export default async function NotFound() {
   return (
     <>
-      <div className=" flex gap-2">
+      <div className=" flex gap-2 flex-wrap">
         <AlertCircle color="red" />
         The page was not found
       </div>

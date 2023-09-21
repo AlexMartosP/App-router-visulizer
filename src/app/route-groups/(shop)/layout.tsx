@@ -6,7 +6,7 @@ import { PropsWithChildren } from "react";
 export default function Layout({ children }: PropsWithChildren) {
   return (
     <DashedBorder label="Shop layout">
-      <div className="flex items-center">
+      <div className="flex flex-col lg:flex-row items-start gap-2 lg:items-center">
         <div className="flex-1">
           <h1>Shop route group</h1>
           <p className="mt-4">
@@ -17,7 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
         <ClickButton />
       </div>
       <div className="py-4"></div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NavLink href="/route-groups">Main</NavLink>
         <NavLink href="/route-groups/all-products">All products (shop)</NavLink>
         <NavLink href="/route-groups/123">Single product (shop)</NavLink>

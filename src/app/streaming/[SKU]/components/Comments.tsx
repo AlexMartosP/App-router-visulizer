@@ -33,7 +33,7 @@ export default async function Comments({ sku }: CommentsProps) {
   );
 }
 
-Comments.Loading = () => {
+Comments.Loading = function CommentsLoading() {
   return (
     <div className="flex flex-col gap-4">
       {[1, 2, 3].map((t) => (

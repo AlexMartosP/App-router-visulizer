@@ -27,7 +27,7 @@ export default function IntersectionObserverComponent({
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [onTrigger]);
 
   return <div id={id} />;
 }
