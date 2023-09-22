@@ -45,7 +45,10 @@ export default async function Page({ params }: { params: { SKU: string } }) {
               <Delivery />
             </Suspense>
             <div className="py-2"></div>
-            <Button size="lg" className="w-full flex flex-col lg:gap-2">
+            <Button
+              size="lg"
+              className="w-full flex flex-col lg:flex-row lg:gap-2"
+            >
               <span>Add to cart</span>
               <Dot className="hidden lg:block" />
               <span>{product.price} SEK</span>

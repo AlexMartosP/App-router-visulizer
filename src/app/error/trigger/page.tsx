@@ -1,21 +1,21 @@
 "use client";
 
 import { Button } from "@/components/Button";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export const dynamic = "force-dynamic";
 
 export default function Page() {
-  const router = useRouter();
+  const [shouldError, setShouldError] = useState(false);
 
-  if (Math.round(Math.random()) === 0) {
+  if (shouldError) {
     throw new Error("An error occured during rendering");
   }
   return (
     <>
       <h1>You got lucky</h1>
       <div className="py-2"></div>
-      <Button onClick={() => router.refresh()}>Try again</Button>
+      <Button onClick={() => setShouldError(true)}>Try again</Button>
     </>
   );
 }

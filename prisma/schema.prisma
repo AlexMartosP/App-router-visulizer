@@ -6,13 +6,14 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlserver"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model Product {
   SKU         String    @id
-  name        String    @db.NVarChar(50)
+  name        String
   description String?
   price       Float
   imageId     String
@@ -21,14 +22,16 @@ model Product {
 
 model Comment {
   id        Int     @id @default(autoincrement())
-  title     String  @db.NVarChar(100)
-  body      String  @db.NVarChar(600)
+  title     String
+  body      String  @db.VarChar(500)
   product   Product @relation(fields: [productId], references: [SKU])
   productId String
+
+  @@index([productId])
 }
 
 model Message {
   id       Int      @id @default(autoincrement())
-  text     String   @db.NVarChar(100)
+  text     String
   dateSent DateTime @default(now())
 }
