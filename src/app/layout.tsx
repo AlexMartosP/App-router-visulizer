@@ -5,6 +5,7 @@ import NavItem from "@/components/NavItem";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import URLBar from "@/components/URLBar";
+import Menu from "./Menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,50 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex">
-          <div className="p-8 basis-82 h-screen overflow-y-auto">
+        <div className="lg:flex">
+          <div className="fixed bg-white lg:relative top-0 left-0 right-0 px-8 z-30 lg:basis-82 lg:h-screen h-14 lg:overflow-y-auto flex justify-between items-center lg:py-8 lg:items-start lg:flex-col lg:justify-normal">
             <h1 className="text-xl font-light">
               <strong className="font-semibold">App</strong> router
             </h1>
             <div className="py-4"></div>
-            <NavGroup title="Routing">
-              <NavItem href="/dynamic-routes">Dynamic routes</NavItem>
-              <NavItem href="/catch-all">Catch all routes</NavItem>
-              <NavItem href="/parallel">Parallel routes</NavItem>
-              <NavItem href="/intercepting">Intercepting routes</NavItem>
-            </NavGroup>
-            <div className="py-4"></div>
-            <NavGroup title="Layouts">
-              <NavItem href="">Nested layouts</NavItem>
-              <NavItem href="">Route groups (grouped layouts)</NavItem>
-            </NavGroup>
-            <div className="py-4"></div>
-            <NavGroup title="Files & states">
-              <NavItem href="">Loading</NavItem>
-              <NavItem href="">Error</NavItem>
-              <NavItem href="">Not found</NavItem>
-            </NavGroup>
-            <div className="py-4"></div>
-            <NavGroup title="Rendering & Data fetching">
-              <NavItem href="">Streaming</NavItem>
-              <NavItem href="">Static data (SSG)</NavItem>
-              <NavItem href="">Dynamic data (SSR)</NavItem>
-              <NavItem href="">Incremental Static Regeneration</NavItem>
-              <NavItem href="">Server components</NavItem>
-            </NavGroup>
-            <div className="py-4"></div>
-            <NavGroup title="Mutation">
-              <NavItem href="">Route handler</NavItem>
-              <NavItem href="">Server action</NavItem>
-            </NavGroup>
-            <div className="py-4"></div>
-            <NavGroup title="Other">
-              <NavItem href="">Client context</NavItem>
-              <NavItem href="">Pagination</NavItem>
-              <NavItem href="">Stripe integration</NavItem>
-            </NavGroup>
+            <Menu />
           </div>
-          <div className="flex-1 h-screen overflow-y-auto p-32">
+          <div className="flex-1 lg:h-screen lg:overflow-y-auto lg:p-32 pt-32 p-8">
             <div className="border p-4 rounded-md">
               <URLBar />
             </div>

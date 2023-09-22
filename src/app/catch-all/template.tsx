@@ -20,7 +20,7 @@ export default function Template({ children }: { children: any }) {
       <div className="py-4"></div>
       <span className="font-semibold">Change slug (or change the URL)</span>
       <div className="py-1"></div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <Button variant="secondary" asChild>
           <Link href="/catch-all/computers">Computers</Link>
         </Button>

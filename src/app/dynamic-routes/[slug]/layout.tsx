@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <span className="font-semibold">Change id</span>
       <div className="py-1"></div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <Button variant="secondary" asChild>
           <Link href="/dynamic-routes/computers/1">Super fast computer(1)</Link>
         </Button>

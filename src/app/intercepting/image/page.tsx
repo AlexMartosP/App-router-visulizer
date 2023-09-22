@@ -17,11 +17,10 @@ export default function Page() {
       <p className="mt-4">This is the actual image page rendering on load</p>
       <div className="py-2"></div>
       <Image
-        src={coolDog}
+        src="1516222338250-863216ce01ea"
         width={400}
         height={300}
         alt="cool dog"
-        placeholder="blur"
         className="rounded-md w-full"
       />
     </div>

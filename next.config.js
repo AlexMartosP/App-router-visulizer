@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   images: {
     remotePatterns: [
       {
@@ -8,7 +8,10 @@ const nextConfig = {
         pathname: "/photo**",
       },
     ],
+    loader: "custom",
+    loaderFile: "./src/lib/loader.ts",
+  },
+  experimental: {
+    serverActions: true,
   },
 };
-
-module.exports = nextConfig;

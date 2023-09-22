@@ -81,4 +81,11 @@
   h1 {
     @apply font-semibold text-xl;
   }
+
+  @media (min-width: 1024px) {
+   body {
+    max-height: 100vh;
+    overflow: hidden; 
+   }
+  }
 }
